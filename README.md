@@ -1,0 +1,75 @@
+# Claude Session Migrator
+
+> Transfer, recover, backup and migrate Claude Code sessions between accounts automatically.
+
+A lightweight, dependency-free Python utility that helps you **recover, back up, and migrate Claude Code sessions** between accounts on Windows. It automatically locates your local Claude session folder and safely moves conversation history without overwriting existing files.
+
+---
+
+## Features
+
+- 🔍 **Automatic session folder detection** — finds your Claude session directory via `%APPDATA%`
+- ♻️ **Recover lost Claude chats** — restore conversations after switching accounts or reinstalling
+- 🔄 **Transfer sessions between accounts** — move history from an old session into your current one
+- 💾 **Backup local Claude session files** — keep a copy before reinstalling Claude Code
+- 🛡️ **Safe migration** — never overwrites files that already exist in the destination
+- 🪟 **Windows support** — built for the Windows `AppData\Roaming` layout
+
+## Use Cases
+
+### Recover Missing Claude Chats
+
+If your Claude conversations disappeared after switching accounts, reinstalling Claude, or clearing local data, this tool can help recover locally stored session files.
+
+### Transfer Sessions Between Accounts
+
+Move session files from an older Claude account session into a newer one so your conversation history follows you.
+
+### Backup Claude Conversations
+
+Create a backup of your local session files before reinstalling Claude Code or migrating to a new machine.
+
+## Installation
+
+```bash
+git clone https://github.com/USERNAME/claude-session-migrator.git
+cd claude-session-migrator
+python migrate_sessions.py
+```
+
+> Requires Python 3.6+. No third-party dependencies — uses only the standard library (`os`, `shutil`, `pathlib`).
+
+## How It Works
+
+1. Locates `%APPDATA%\Claude\claude-code-sessions`.
+2. Lists the timestamped session folders inside it.
+3. Treats the **oldest** folder as the source and the **newest** as the destination.
+4. Copies every `.json` / `.jsonl` session file from source to destination, skipping any file that already exists.
+
+> ⚠️ **Always back up your data first.** This tool copies files (it does not delete the source), but you should keep your own backup before running any migration utility.
+
+## Claude Session Folder Location
+
+**Windows:**
+
+```text
+%APPDATA%\Claude\claude-code-sessions
+```
+
+## FAQ
+
+See [FAQ.md](FAQ.md) for answers to common questions about transferring, recovering, and backing up Claude sessions.
+
+## Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+[MIT](LICENSE)
+
+---
+
+### Keywords
+
+claude session migration, claude chat recovery, claude conversation transfer, claude history recovery, claude code session backup, claude account migration, claude session transfer, anthropic claude session recovery
