@@ -34,6 +34,15 @@ Common causes include switching accounts, reinstalling Claude Code, or clearing 
 
 Place the session files into a folder under `%APPDATA%\Claude\claude-code-sessions` and run the migrator to merge them into your current session folder. Existing files are never overwritten.
 
+## I ran the script but my old chats still don't show up. What do I do?
+
+Claude needs a **full restart** to reload the session files — closing the window is not enough:
+
+1. Press `Ctrl + Shift + Esc` to open **Task Manager**.
+2. Under the **Processes** tab, find every **Claude** entry.
+3. Right-click each one → **End task**.
+4. Open Claude Desktop again — your old chats should now be there.
+
 ## Is this tool safe? Does it delete anything?
 
 The migrator only **copies** files — it never deletes the source, and it skips any file that already exists in the destination. Still, always keep your own backup before running any migration utility.

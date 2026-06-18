@@ -39,6 +39,27 @@ python migrate_sessions.py
 
 > Requires Python 3.6+. No third-party dependencies — uses only the standard library (`os`, `shutil`, `pathlib`).
 
+## Step-by-Step Guide (Simple)
+
+Follow these steps exactly:
+
+1. **Install Python** (3.6 or newer) from [python.org](https://www.python.org/downloads/) if you don't have it. During install, tick **"Add Python to PATH"**.
+2. **Download this tool** — click the green **Code** button above → **Download ZIP**, then unzip it. (Or use `git clone`, see [Installation](#installation).)
+3. **Close Claude completely before running.** Quit the Claude Desktop app.
+4. **Open the folder** where you unzipped the files.
+5. **Run the script** — open a terminal in that folder and type:
+   ```bash
+   python migrate_sessions.py
+   ```
+   The tool finds your session folders automatically and copies your old chat files into your current session. It prints each file as it copies.
+6. **Fully close Claude via Task Manager.** This is important — closing the window is not enough:
+   - Press `Ctrl + Shift + Esc` to open **Task Manager**.
+   - Find every **Claude** process under the **Processes** tab.
+   - Right-click each one → **End task**.
+7. **Reopen Claude Desktop.** Your old chats should now appear in your current account. 🎉
+
+> If you don't see them right away, give it a few seconds — Claude reloads the session files on startup.
+
 ## How It Works
 
 1. Locates `%APPDATA%\Claude\claude-code-sessions`.
