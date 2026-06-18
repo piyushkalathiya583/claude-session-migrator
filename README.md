@@ -6,6 +6,20 @@ A lightweight, dependency-free Python utility that helps you **recover, back up,
 
 ---
 
+## ⭐ Quick Start — No Python Needed (Recommended)
+
+The easiest way to use this tool. **No installation, no Python required.**
+
+1. 👉 **[Download `claude-session-migrator.exe` from the latest Release](../../releases/latest)**
+2. **Quit Claude Desktop.**
+3. **Double-click the `.exe`.** It finds your session folders and copies your old chats automatically.
+4. **Fully close Claude via Task Manager** (`Ctrl + Shift + Esc` → right-click each **Claude** process → **End task**).
+5. **Reopen Claude Desktop** — your old chats are back. 🎉
+
+> Prefer running the Python script instead? See the [Step-by-Step Guide](#step-by-step-guide-simple) below.
+
+---
+
 ## Features
 
 - 🔍 **Automatic session folder detection** — finds your Claude session directory via `%APPDATA%`
